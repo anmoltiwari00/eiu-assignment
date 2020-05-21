@@ -2,12 +2,12 @@
 
 ##PROJECT STRUCTURE
 
-1.This project uses rails structure. Files of the same type are kept in one single folder. For eg
+1. This project uses rails structure. Files of the same type are kept in one single folder. For eg
 presentational components are inside containers folder whereas dumb components are inside components folder.
 
-2.All commonly accessed Root files like rootsaga, rootreducer, actiontypes, app.js and so have been capitalised.
+2. All commonly accessed Root files like rootsaga, rootreducer, actiontypes, app.js and so have been capitalised.
 
-3.This project uses modular css for local scope of css files inside component.
+3. This project uses modular css for local scope of css files inside component.
 
 4. React router dom is used for routing. A 404 page has been setup for any other path besides '/'.
 
