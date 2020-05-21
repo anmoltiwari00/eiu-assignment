@@ -1,26 +1,28 @@
+//core imports
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+//container & component imports
+import Dashboard from './containers/Dashboard/dashboard';
+import NotFound from './components/notFound';
+//css imports
+import styles from './App.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends React.Component {
+  render() {
+    return(
+      <Router basename="/">
+        <div className={styles.container}>
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+      </Router>
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = state => ({...state});
+
+export default connect(mapStateToProps)(App);

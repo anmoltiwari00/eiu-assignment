@@ -1,0 +1,32 @@
+
+.user {
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 12pt;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.desktop {
+  display: none;
+}
+.mobile {
+  display: block;
+  width: 100%;
+}
+.dropDown {
+  width: 90%;
+  margin-bottom: 20px;
+}
+.active {
+  background-color: aqua;
+}
+
+@media (min-width: 491px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+}

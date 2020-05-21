@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###This project was bootstrapped with [Create React App]####
 
-## Available Scripts
+##PROJECT STRUCTURE
 
-In the project directory, you can run:
+1.This project uses rails structure. Files of the same type are kept in one single folder. For eg
+presentational components are inside containers folder whereas dumb components are inside components folder.
 
-### `yarn start`
+2.All commonly accessed Root files like rootsaga, rootreducer, actiontypes, app.js and so have been capitalised.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3.This project uses modular css for local scope of css files inside component.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+4. React router dom is used for routing. A 404 page has been setup for any other path besides '/'.
 
-### `yarn test`
+5. Material UI is used as the choice of design system.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. Redux is used for state management. React-redux is used for bindings.
 
-### `yarn build`
+7. Redux saga is used as the middleware choice. Handles side effects better then redux thunk.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8. Axios is used for making api calls.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+9. Prop types have been used for props validation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+10. Comments have been provided beside important code chunks.
 
-### `yarn eject`
+##PROJECT FLOW
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Dashboard component loads. Api is called to fetch users.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. UserList component is populated with the same. By default first user in sorted list is shown.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. On click of any user, the form gets populated respectively. All fields are required.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Form values which are not readonly(role, domain) can be changed.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+5. On click of submit button the user is updated and the updated user list is logged to the console. The same is
+updated in redux store as well.

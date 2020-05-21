@@ -1,0 +1,28 @@
+.container {
+  display: block;
+  padding: 5%;
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.userList {
+  width: 100%;
+}
+.userForm {
+  width: 100%;
+}
+
+@media (min-width: 491px) {
+  .container {
+    display: flex;
+    width: 70%;
+    padding: 5%;
+  }
+  .userList {
+    width: 30%;
+  }
+  .userForm {
+    width: 70%;
+  }
+}
